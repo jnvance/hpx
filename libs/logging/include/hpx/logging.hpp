@@ -179,6 +179,12 @@ namespace hpx { namespace util {
         {
             constexpr dummy_log_impl() noexcept {}
 
+            template <typename T>
+            dummy_log_impl const& operator<<(T&&) const noexcept
+            {
+                return *this;
+            }
+
             template <typename... Args>
             dummy_log_impl const& format(char const*, Args const&...) const
                 noexcept
@@ -187,12 +193,6 @@ namespace hpx { namespace util {
             }
         };
         constexpr dummy_log_impl dummy_log;
-
-        template <typename T>
-        dummy_log_impl const& operator<<(dummy_log_impl const& l, T&&)
-        {
-            return l;
-        }
     }    // namespace detail
 
     // clang-format off
