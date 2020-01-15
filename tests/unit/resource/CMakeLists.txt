@@ -5,6 +5,7 @@
 # file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
 set(tests
+    scheduler_binding_check
     scheduler_priority_check
     shutdown_suspended_pus
     suspend_disabled
@@ -28,6 +29,7 @@ endif()
 
 set(cross_pool_injection_PARAMETERS THREADS_PER_LOCALITY -1)
 set(scheduler_priority_check_PARAMETERS THREADS_PER_LOCALITY -1)
+set(scheduler_binding_check_PARAMETERS THREADS_PER_LOCALITY -1)
 set(shutdown_suspended_pus_PARAMETERS THREADS_PER_LOCALITY 4)
 set(suspend_disabled_PARAMETERS THREADS_PER_LOCALITY 4)
 set(suspend_pool_PARAMETERS THREADS_PER_LOCALITY 4)
