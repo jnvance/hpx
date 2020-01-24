@@ -224,6 +224,13 @@ function(hpx_setup_target target)
     target_link_libraries(${target} ${__tll_private} hpx_internal_flags)
   endif()
 
+  # if we build tests using an installed version of HPX we need to add the local
+  # root as an include path as tests refer to headers that are not normally
+  # installed
+  if(HPX_WITH_INSTALLED_VERSION)
+    target_include_directories(${target} ${__tll_private} ${PROJECT_SOURCE_DIR})
+  endif()
+
   get_target_property(target_EXCLUDE_FROM_ALL ${target} EXCLUDE_FROM_ALL)
 
   if(target_EXPORT AND NOT target_EXCLUDE_FROM_ALL)
