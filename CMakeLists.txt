@@ -1,3 +1,4 @@
+# Copyright (c)      2020 Mikael Simberg
 # Copyright (c) 2007-2020 Hartmut Kaiser
 # Copyright (c) 2011-2014 Thomas Heller
 # Copyright (c) 2007-2008 Chirag Dekate
@@ -66,7 +67,7 @@ set(HPX_VERSION_MAJOR 1)
 set(HPX_VERSION_MINOR 4)
 set(HPX_VERSION_SUBMINOR 0)
 set(HPX_VERSION_DATE 20200115)
-set(HPX_VERSION_TAG "")
+set(HPX_VERSION_TAG "-trunk")
 
 set(HPX_VERSION "${HPX_VERSION_MAJOR}.${HPX_VERSION_MINOR}.${HPX_VERSION_SUBMINOR}")
 set(HPX_LIBRARY_VERSION "${HPX_VERSION}")
@@ -386,10 +387,6 @@ hpx_option(HPX_WITH_CUDA BOOL
   "Enable CUDA support (default: OFF)" OFF ADVANCED)
 hpx_option(HPX_WITH_CUDA_CLANG BOOL
   "Use clang to compile CUDA code (default: OFF)" OFF ADVANCED)
-hpx_option(HPX_WITH_HCC BOOL
-  "Enable hcc support (default: OFF)" OFF ADVANCED)
-hpx_option(HPX_WITH_SYCL BOOL
-  "Enable sycl support (default: OFF)" OFF ADVANCED)
 
 ################################################################################
 # HPX datapar configuration
