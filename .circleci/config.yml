@@ -47,6 +47,8 @@ docs_push_filter: &docs_push_filter
         only:
           - master
           - release
+          # TODO: Remove this before the PR is merged.
+          - gh-pages-new-repo
       tags:
         ignore: stable
 
