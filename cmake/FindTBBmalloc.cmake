@@ -17,7 +17,7 @@ find_path(
   PATH_SUFFIXES include
 )
 
-set(TBBMALLOC_PATH_SUFFIX "lib/intel64" "lib/intel64/gcc4.4")
+set(TBBMALLOC_PATH_SUFFIX "lib/intel64" "lib/intel64/gcc4.4" "lib/intel64/gcc4.8")
 if(TBBMALLOC_PLATFORM STREQUAL "mic")
   set(TBBMALLOC_PATH_SUFFIX "lib/mic")
 endif()
