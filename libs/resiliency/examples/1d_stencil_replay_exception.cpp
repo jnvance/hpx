@@ -164,9 +164,12 @@ int hpx_main(hpx::program_options::variables_map& vm)
             std::vector<subdomain_future> next_input(subdomains);
             for (int j = 0; j < subdomains; ++j)
             {
+HPX_THROW_EXCEPTION(hpx::not_implemented,__FUNCTION__,"Causing compilation errors");
+#if 0
                 next_input[j] = hpx::resiliency::experimental::dataflow_replay(
                     n, update, input[(j - 1 + subdomains) % subdomains],
                     input[j], input[(j + 1) % subdomains]);
+#endif
             }
             std::swap(input, next_input);
         }

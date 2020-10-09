@@ -55,6 +55,8 @@ int hpx_main(hpx::program_options::variables_map& vm)
     std::size_t usr = vm["usr-value"].as<std::size_t>();
     std::size_t a = vm["a-value"].as<std::size_t>();
 
+HPX_THROW_EXCEPTION(hpx::not_implemented,__FUNCTION__,"Causing compilation errors");
+#if 0
     {
         // Successful replicate
         hpx::future<int> f = hpx::resiliency::experimental::dataflow_replicate(
@@ -103,6 +105,7 @@ int hpx_main(hpx::program_options::variables_map& vm)
             std::cout << "Bad Calcuation!" << std::endl;
         }
     }
+#endif
 
     return hpx::finalize();
 }
